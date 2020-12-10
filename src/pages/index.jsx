@@ -3,6 +3,9 @@ import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
 
+import Header from '../components/Header'
+import Main from '../components/Main'
+
 export default function Home() {
   return (
     <Container>
@@ -12,7 +15,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello world</h1>
+        <Header />
+        <Main />
       </main>
     </Container>
   )
