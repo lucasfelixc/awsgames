@@ -3,11 +3,20 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 80%;
   height: 100%;
+
+  .lineBottom {
+    width: 100%;
+    height: 1px;
+
+    background: #d2d2d2;
+
+    margin: 5px 0 10px 0;
+  }
 `
 
 export const ContentTop = styled.div`
   width: 100%;
-  height: 100%;
+  height: 70%;
 
   position: relative;
 
@@ -21,6 +30,8 @@ export const ContentTop = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    margin-right: 100px;
   }
 
   .infos .line {
@@ -78,6 +89,14 @@ export const ContentTop = styled.div`
   .imgMain img {
     width: 406.89px;
     height: 354.25px;
+
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+
+    :hover {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+    }
   }
 
   .linkTrailer {
@@ -87,14 +106,52 @@ export const ContentTop = styled.div`
       width: 100px;
       height: 100px;
 
-      transition: 0.4s;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
     }
 
     :hover {
       svg {
-        width: 110px;
-        height: 110px;
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
       }
     }
+  }
+`
+
+export const ContentBottom = styled.div`
+  width: 100%;
+  height: 30%;
+
+  .tittle {
+    display: flex;
+    align-items: center;
+  }
+
+  .tittle .tittleIcon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000000;
+
+    margin: 0 20px 0 40px;
+
+    border-radius: 14px;
+  }
+
+  .tittle strong {
+    font: 700 20px Poppins, sans-serif;
+  }
+
+  .contentCards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 20px;
   }
 `
