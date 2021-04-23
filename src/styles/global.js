@@ -32,4 +32,8 @@ export default createGlobalStyle`
     cursor: pointer;
     border: none;
   }
+
+  input {
+    outline: none;
+  }
 `

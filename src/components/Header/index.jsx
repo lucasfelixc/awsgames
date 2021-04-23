@@ -14,6 +14,8 @@ function Header() {
   const [pressedGallery, setPressedGallery] = useState(false)
   const [pressedReviews, setPressedReviews] = useState(false)
 
+  const [showInput, setShowInput] = useState(false)
+
   function handleClickHome() {
     setPressedHome(true)
     setPressedStore(false)
@@ -52,6 +54,10 @@ function Header() {
     setPressedBlog(false)
     setPressedGallery(false)
     setPressedReviews(true)
+  }
+
+  function handleClickShow() {
+    setShowInput(!showInput)
   }
 
   return (
@@ -98,7 +104,11 @@ function Header() {
         </ul>
       </div>
 
-      <Search>
+      <div className="contentSearch">
+        <input type="text" className={showInput ? 'show' : 'hide'} />
+      </div>
+
+      <Search onClick={handleClickShow} shadow={showInput}>
         <SearchIcon />
       </Search>
     </Container>
